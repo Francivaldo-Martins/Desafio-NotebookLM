@@ -1,0 +1,288 @@
+Apresentação detalhada das alterações/evoluções do sistema de patrimônio em pptx
+
+Contexto e Objetivos: ao longo de cinco meses (abr./ago.), eu, como administrador do sistema no setor em que trabalho, em parceria com a desenvolvedora do sistema, tratamos de diversos tópicos relacionados à melhoria e à evolução do sistema para nossos usuários (clientes internos) e administradores.
+Nesse período, trocamos diversos e-mails, realizei vários testes e também nos reunimos pessoalmente em algumas ocasiões. Após as reuniões, eu registrava por e-mail os assuntos tratados, apenas para manter o histórico.
+Ao final de aproximadamente sete alterações, precisava informar, de forma clara e objetiva, aos demais colaboradores do setor (administradores) quais mudanças haviam sido realizadas, para que pudessem se familiarizar com as atualizações e prestar atendimento aos nossos clientes internos com propriedade.
+Como seria trabalhoso levantar manualmente todo o histórico dos registros e identificar cada alteração, pensei em utilizar o NotebookLM para realizar essa tarefa em uma fração do tempo que gastaria manualmente, identificando as modificações (**de/para**), os benefícios de cada uma e, por fim, elaborar uma apresentação detalhada em PPTX.
+
+Curadoria de Fontes: disponibilizei prints do sistema, mostrando como era e como ficou, além de todos os e-mails trocados com a desenvolvedora do sistema ao longo dos meses. Ao todo, são 3 arquivos em Word e 3 em PDF. Por se tratar de dados da empresa protegidos pela LGPD, não posso disponibilizá-los nem inserir links para esses arquivos.
+
+Engenharia de Prompts e "Cicatrizes": meu primeiro prompt foi:
+"Com base nos meus e-mails do Outlook [xxx@xxx.gov.br](mailto:xxx@xxx.gov.br), somente nas mensagens trocadas com a 'Fulana', e em todas as fontes fornecidas, liste, de forma organizada, todas as alterações evolutivas que foram feitas no sistema de xxx, de 07/04/2026 até hoje, o motivo dessas mudanças e suas vantagens. Preciso que fique tipo uma apresentação em PowerPoint, para que eu possa informar a todos os meus colegas do setor, de forma prática e didática, comparando, com imagens, como era antes e como ficou depois."
+Notem este trecho do prompt: "fique TIPO uma apresentação em PPTX".
+Essa foi a primeira "cicatriz". Logicamente, o retorno não foi um arquivo PPTX pronto, como eu queria, mas sim um conteúdo estruturado e dividido por slides, para que eu mesmo montasse a apresentação.
+Meu próximo passo foi utilizar o Estúdio – Apresentação de Slides, com o seguinte prompt:
+"O documento deve consolidar todas as alterações realizadas no sistema, incluindo a lógica de bloqueio de botões para evitar duplicidade, os ajustes de layout nos avisos de transferência (logotipo, larguras de colunas e quebras de texto) e as novas regras de negócio para exportação de dados para Excel. O tom deve ser formal e focado na entrega técnica para garantir que os requisitos do Setor de Patrimônio foram atendidos antes do encerramento da etapa."
+Uma apresentação foi gerada, porém não consegui baixá-la e, ao analisá-la, percebi alguns erros e informações que não deveriam constar na versão final.
+Foi então que, após uma análise mais detalhada do conteúdo, voltei com um novo prompt:
+"Com base na apresentação gerada no Estúdio 'Modernização do Patrimônio – Parte 1', quero que ajuste para uma apresentação simples em PPTX. Não deve incluir informações sobre o bloqueio no inventário, nem sobre a transferência simultânea de bens pertencentes a setores diferentes, nem sobre o campo origem que ficava em branco.
+A inclusão da coluna Setor, com largura ajustada, foi feita no Aviso de Transferência. No slide 6, exclua a figura, pois não condiz com a figura real. A emissão dos Avisos de Transferência cortando a borda ou ficando desconfigurada não era um problema histórico, mas sim um problema gerado ao se ajustarem as quantidades de bens por aviso e, posteriormente, solucionado. No slide 8, exclua as figuras pelo mesmo motivo." Dessa vez, o resultado ficou muito próximo do que eu realmente precisava.
+E aqui está outra "cicatriz" importante: quanto mais específico eu fui sobre o que deveria permanecer, o que deveria ser excluído e, principalmente, sobre o que não deveria ser inventado ou representado visualmente, melhor foi o resultado.
+O aprendizado foi que não basta dizer à IA **o que fazer**. É preciso também deixar claro:
+* qual é o resultado final esperado;
+* o que deve ser incluído;
+* o que não deve ser incluído;
+* quais informações precisam ser preservadas exatamente;
+* o que pode ou não ser alterado;
+* e quais elementos visuais não correspondem à realidade e, portanto, não devem ser utilizados.
+Ou seja, minhas primeiras tentativas foram mais próximas de "faça isso para mim". Com as "cicatrizes", passei a trabalhar mais próximo de "faça isso, desta forma, com estas informações, não faça aquilo e respeite estas condições".
+Essa evolução deixou claro, na prática, que um bom resultado não depende apenas da capacidade da IA, mas também da capacidade de quem a utiliza de explicar exatamente o que precisa.
+
+Apresentação detalhada em pptx da evolução do sistema de patrimônio (Entrega Final):
+
+Resumos estruturados do assunto: o problema inicial
+O objetivo era transformar um histórico de aproximadamente cinco meses de trabalho no sistema de patrimônio em uma apresentação em PPTX, reunindo:
+alterações realizadas no sistema;
+situação anterior e posterior (de/para);
+motivos das alterações;
+benefícios obtidos;
+evidências visuais;
+informações provenientes dos e-mails e prints;
+conteúdo suficiente para orientar os demais administradores do sistema.
+A motivação principal era economizar tempo, substituindo o levantamento manual de dezenas de registros por uma análise realizada com auxílio de IA.
+Ideia central: a IA foi utilizada não apenas para gerar texto, mas para analisar fontes, identificar mudanças e transformar informações dispersas em um produto final estruturado.
+
+A importância da curadoria das fontes
+As fontes disponibilizadas foram:
+prints do sistema antes das alterações;
+prints do sistema depois das alterações;
+e-mails trocados com a desenvolvedora;
+registros das tratativas realizadas ao longo dos meses.
+Essa seleção permitiu que a IA tivesse acesso tanto ao contexto textual quanto às evidências visuais das alterações.
+Aprendizado: a qualidade da resposta depende não apenas do prompt, mas também da qualidade, relevância e organização das fontes fornecidas.
+
+Primeira tentativa: pedido amplo
+O primeiro prompt solicitava que a IA identificasse as alterações e apresentasse o conteúdo "tipo uma apresentação em PowerPoint".
+O problema estava principalmente na expressão:
+"fique tipo uma apresentação em PPTX"
+A intenção era obter um arquivo PPTX pronto, mas a instrução não especificava claramente que o resultado deveria ser um arquivo.
+O sistema interpretou o pedido como uma solicitação para produzir conteúdo organizado em formato de apresentação, e não necessariamente para gerar o arquivo final.
+Primeira cicatriz: existe diferença entre solicitar conteúdo para uma apresentação e solicitar a apresentação como arquivo.
+
+Segunda tentativa: uso do Estúdio de Apresentação
+Na segunda etapa, foi utilizado o Estúdio – Apresentação de Slides.
+O prompt passou a definir melhor:
+o conteúdo que deveria aparecer;
+as alterações que deveriam ser consolidadas;
+o tom da apresentação;
+o objetivo técnico;
+o contexto de utilização.
+O resultado foi uma apresentação, mas surgiram dois problemas:
+dificuldades para baixar o arquivo;
+presença de informações incorretas ou que não deveriam fazer parte da versão final.
+Aprendizado: mesmo quando a IA entrega o formato desejado, ainda é necessário validar criticamente o conteúdo.
+
+Terceira tentativa: especificação e restrições
+A terceira tentativa foi muito mais detalhada.
+O prompt passou a informar explicitamente:
+o que deveria permanecer;
+o que deveria ser excluído;
+quais informações estavam incorretas;
+quais imagens não correspondiam à realidade;
+quais problemas eram históricos e quais haviam sido causados durante uma alteração;
+quais elementos deveriam ser preservados;
+quais slides precisavam de ajustes específicos.
+O resultado ficou muito mais próximo do esperado.
+Segunda grande cicatriz: quanto maior a precisão sobre inclusões, exclusões, preservação de informações e limitações, mais aderente foi o resultado.
+
+A principal evolução na forma de elaborar prompts
+A evolução pode ser representada assim:
+Primeira fase:
+"Faça isso para mim."
+↓
+Segunda fase:
+"Faça isso considerando estas informações."
+↓
+Terceira fase:
+"Faça isso desta forma, utilizando estas informações, preserve estes elementos, exclua aqueles, não invente informações e respeite estas condições."
+Essa mudança representa uma evolução de um prompt genérico e orientado à tarefa para um prompt estruturado, contextualizado e orientado ao resultado.
+
+O papel das "cicatrizes"
+As "cicatrizes" representam os erros, limitações e resultados inesperados encontrados durante as tentativas.
+Elas não foram apenas problemas: tornaram-se fontes de aprendizado para melhorar os próximos prompts.
+O processo foi:
+Prompt → Resultado → Identificação do problema → Correção → Novo prompt → Resultado melhor
+Isso demonstra uma característica importante da Engenharia de Prompts: a construção de bons prompts é frequentemente iterativa.
+
+Conclusão principal
+O principal aprendizado foi:
+Não basta dizer à IA o que fazer. É necessário explicar com precisão o que se espera como resultado e estabelecer os limites dentro dos quais ela deve trabalhar.
+Um prompt eficiente deve, quando necessário, especificar:
+Objetivo — o que precisa ser realizado;
+Contexto — por que a tarefa está sendo realizada;
+Fontes — quais informações devem ser utilizadas;
+Formato de saída — como o resultado deve ser entregue;
+Conteúdo obrigatório — o que precisa aparecer;
+Conteúdo proibido — o que não pode aparecer;
+Restrições — o que não pode ser alterado;
+Critérios de fidelidade — o que precisa representar exatamente a realidade;
+Critérios visuais — quais imagens podem ou não ser utilizadas;
+Validação — como verificar se o resultado está correto.
+
+Glossário com os principais conceitos aprendidos:
+01. PROMPT
+Definição: Instrução fornecida à IA para orientar uma tarefa.
+Exemplo no caso: Comando utilizado para analisar os e-mails e produzir a apresentação.
+02. ENGENHARIA DE PROMPTS
+Definição: Processo de criar, testar e aperfeiçoar instruções para obter melhores resultados da IA.
+Exemplo no caso: Evolução dos prompts utilizados até chegar ao resultado desejado.
+03. PROMPT GENÉRICO
+Definição: Instrução com poucas informações ou especificações.
+Exemplo no caso: "Fique tipo uma apresentação em PPTX."
+04. PROMPT ESPECÍFICO
+Definição: Instrução que detalha o que a IA deve fazer e como deve fazer.
+Exemplo no caso: Informar o que incluir, excluir, preservar e como representar as informações.
+05. CONTEXTO
+Definição: Informações que explicam a situação, o problema e o objetivo da tarefa.
+Exemplo no caso: Explicar que o sistema passou por várias alterações durante cinco meses.
+06. CURADORIA DE FONTES
+Definição: Seleção e organização das informações que serão utilizadas pela IA.
+Exemplo no caso: Fornecer e-mails e prints do sistema antes e depois das alterações.
+07. FONTE PRIMÁRIA
+Definição: Informação original diretamente relacionada ao fato analisado.
+Exemplo no caso: E-mails da desenvolvedora e prints reais do sistema.
+08. DE/PARA
+Definição: Comparação entre a situação anterior e a situação posterior a uma mudança.
+Exemplo no caso: Mostrar como determinada função era antes e como ficou depois.
+09. RESTRIÇÃO
+Definição: Regra ou limite que a IA deve obrigatoriamente respeitar.
+Exemplo no caso: Não incluir determinadas informações na apresentação.
+10. CRITÉRIO DE EXCLUSÃO
+Definição: Indicação clara do que não deve aparecer no resultado.
+Exemplo no caso: Excluir informações sobre o bloqueio no inventário.
+11. PRESERVAÇÃO DE INFORMAÇÃO
+Definição: Determinação de que uma informação deve ser mantida sem alterar seu significado.
+Exemplo no caso: Manter corretamente a diferença entre um problema histórico e um problema causado por uma alteração.
+12. FIDELIDADE VISUAL
+Definição: Representação visual fiel à realidade e às fontes fornecidas.
+Exemplo no caso: Utilizar somente imagens que realmente correspondam às telas do sistema.
+13. ALUCINAÇÃO
+Definição: Quando a IA apresenta como verdadeiro algo que não está presente ou comprovado nas fontes.
+Exemplo no caso: Criar uma imagem ou informação que não corresponde ao sistema real.
+14. ITERAÇÃO
+Definição: Repetição do processo, utilizando o resultado anterior para melhorar o próximo.
+Exemplo no caso: Primeiro prompt → análise do resultado → correção → novo prompt.
+15. FEEDBACK
+Definição: Informação fornecida à IA para corrigir ou melhorar um resultado.
+Exemplo no caso: Informar quais slides estavam incorretos e quais informações deveriam ser excluídas.
+16. FORMATO DE SAÍDA
+Definição: Forma como o resultado final deve ser apresentado ou entregue.
+Exemplo no caso: Solicitar um arquivo PPTX em vez de apenas um conteúdo dividido em slides.
+17. RESULTADO ESPERADO
+Definição: Descrição clara do produto final que se deseja obter.
+Exemplo no caso: Uma apresentação simples, objetiva, fiel às fontes e adequada aos administradores.
+18. VALIDAÇÃO HUMANA
+Definição: Conferência realizada pelo usuário para verificar se o resultado da IA está correto.
+Exemplo no caso: Conferir textos, informações e imagens antes de utilizar a apresentação.
+19. PROMPT ORIENTADO A RESULTADO
+Definição: Prompt que deixa claro qual produto final deve ser entregue.
+Exemplo no caso: Especificar que o objetivo é gerar uma apresentação simples em PPTX.
+20. PROMPT COM RESTRIÇÕES
+Definição: Prompt que informa não apenas o que a IA deve fazer, mas também o que ela não pode fazer.
+Exemplo no caso: "Não inclua...", "exclua...", "não invente..." e "utilize somente as imagens reais fornecidas."
+21. CICATRIZ
+Definição: Erro, limitação ou resultado inesperado que gera um aprendizado para melhorar o próximo prompt.
+Exemplo no caso: Perceber que dizer "tipo uma apresentação" não era suficiente para obter um PPTX pronto.
+22. NÃO INVENTAR
+Definição: Orientação para que a IA não crie informações, imagens ou interpretações que não estejam sustentadas pelas fontes.
+Exemplo no caso: Não criar telas fictícias para representar o sistema.
+23. CRITÉRIO DE FIDELIDADE
+Definição: Regra utilizada para garantir que o resultado corresponda às informações originais.
+Exemplo no caso: Conferir se cada alteração apresentada realmente ocorreu e está comprovada pelos e-mails ou prints.
+24. REVISÃO CRÍTICA
+Definição: Análise do resultado da IA para identificar erros, omissões, excessos ou informações incorretas.
+Exemplo no caso: Revisar a apresentação gerada pelo Estúdio antes de considerá-la definitiva.
+
+Prompts reutilizáveis que possam apoiar futuras revisões sobre o tema:
+Prompt 1 — Análise de fontes e identificação de alterações
+Com base exclusivamente nas fontes fornecidas, identifique todas as alterações, melhorias ou evoluções realizadas em [SISTEMA/TEMA] no período de [DATA INICIAL] a [DATA FINAL].
+Para cada alteração, apresente:
+1. O que existia antes;
+2. O que foi alterado;
+3. Como ficou depois da alteração;
+4. O motivo da mudança;
+5. O benefício ou problema solucionado;
+6. As fontes que comprovam a alteração;
+7. Qualquer informação que não possa ser confirmada pelas fontes.
+Organize o resultado em uma estrutura de "DE → PARA → MOTIVO → BENEFÍCIO".
+Não invente informações, funcionalidades, telas, imagens ou justificativas que não estejam presentes ou claramente sustentadas pelas fontes fornecidas.
+Quando houver informações conflitantes entre as fontes, sinalize a divergência em vez de escolher ou inventar uma versão.
+
+Prompt 2 — Transformar análise em apresentação
+Transforme a análise fornecida em uma apresentação em PPTX sobre a evolução de [SISTEMA/TEMA].
+Objetivo da apresentação:
+[DESCREVER O OBJETIVO]
+Público:
+[DESCREVER O PÚBLICO]
+A apresentação deve ser:
+* simples;
+* objetiva;
+* didática;
+* profissional;
+* visualmente organizada;
+* adequada para apresentação aos usuários/administradores.
+Para cada alteração relevante, apresente, sempre que possível:
+* situação anterior;
+* alteração realizada;
+* situação posterior;
+* motivo;
+* benefício;
+* imagem correspondente, quando houver uma imagem real nas fontes.
+Utilize somente informações comprovadas pelas fontes.
+Não crie telas, imagens, funcionalidades, números, justificativas ou exemplos como se fossem reais.
+Quando não houver imagem real disponível, não substitua por uma representação fictícia sem deixar isso claramente indicado.
+
+Prompt 3 — Revisão crítica de uma apresentação gerada pela IA
+Analise criticamente a apresentação [NOME DA APRESENTAÇÃO] comparando-a com todas as fontes fornecidas.
+Identifique:
+1. informações incorretas;
+2. informações que não estão comprovadas pelas fontes;
+3. informações que deveriam ser excluídas;
+4. informações importantes que foram omitidas;
+5. imagens que não correspondem às telas ou situações reais;
+6. interpretações equivocadas;
+7. problemas de sequência ou organização;
+8. qualquer conteúdo que possa induzir o público a uma interpretação incorreta.
+Depois, proponha uma versão corrigida.
+REGRAS IMPORTANTES:
+* Não invente informações para preencher lacunas.
+* Não utilize imagens fictícias como se fossem reais.
+* Não altere o significado das informações fornecidas.
+* Preserve a distinção entre problema histórico, alteração realizada e problema gerado durante uma implementação.
+* Caso uma informação não possa ser confirmada, sinalize-a em vez de apresentá-la como fato.
+O resultado final deve representar fielmente o histórico documentado nas fontes.
+
+Prompt 4 — De/Para com foco gerencial
+Analise as alterações realizadas em [SISTEMA] e apresente cada evolução no formato:
+ANTES
+Como o sistema funcionava anteriormente.
+MUDANÇA
+O que foi alterado.
+DEPOIS
+Como o sistema passou a funcionar.
+MOTIVO
+Por que a alteração foi realizada.
+BENEFÍCIO
+Qual problema foi solucionado ou qual melhoria foi obtida.
+EVIDÊNCIA
+Qual fonte comprova a alteração.
+Utilize linguagem simples, objetiva e profissional, evitando linguagem excessivamente técnica.
+Não misture problemas diferentes em uma mesma alteração e não atribua à alteração benefícios que não estejam sustentados pelas fontes.
+
+Prompt 5 — Auditoria final antes da apresentação
+Antes de considerar a apresentação finalizada, faça uma auditoria completa comparando cada slide com as fontes originais.
+Para cada slide, verifique:
+* A informação está correta?
+* A informação está comprovada?
+* Existe alguma informação que deveria ser excluída?
+* Alguma informação importante foi omitida?
+* A imagem representa exatamente o sistema ou situação descrita?
+* O "antes" corresponde realmente à situação anterior?
+* O "depois" corresponde realmente à situação posterior?
+* O motivo da alteração está correto?
+* O benefício está comprovado?
+* Existe alguma informação inventada ou inferida apresentada como fato?
+* O texto está adequado ao público?
+Ao encontrar qualquer problema, informe o número do slide, descreva o problema e apresente a correção sugerida.
+Não altere informações corretas apenas para melhorar o texto.
+
